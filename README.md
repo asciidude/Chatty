@@ -19,7 +19,7 @@ how to code.
 
             {
                 "command_name": "!date",
-                "responses": ["{TIME.MM_DD_YY}"],
+                "responses": ["{TIME.DATE}"],
                 "response_options": {
                     "type": "action"
                 }
