@@ -1,0 +1,76 @@
+{
+    "login_username": "asciidude",
+    "login_password": "oauth:uaojjhdz90ii4h4uv6jriauysaw18q",
+
+    "enabledModules": {
+        "commands": [
+            true,
+
+            {
+                "command_name": "!date",
+                "responses": ["{TIME.MM_DD_YY}"],
+                "response_options": {
+                    "type": "action"
+                }
+            },
+
+            {
+                "command_name": "!time",
+                "responses": ["{TIME.HH_MM_SS}"],
+                "response_options": {
+                    "type": "action"
+                }
+            },
+
+            {
+                "command_name": "!userinfo",
+                "responses": [
+                    "{USER.USERNAME}'s information",
+                    "-----------------------------",
+                    "Message type: {MESSAGE.TYPE}",
+                    "Room ID: {ROOM.ID}",
+                    "Bits: {USER.BITS}",
+                    "Emotes: {USER.EMOTES}",
+                    "Flags: {USER.FLAGS}",
+                    "ID: {USER.ID}",
+                    "Moderator: {USER.MOD}",
+                    "Turbo: {USER.TURBO}",
+                    "Watching: {CHANNEL}"
+                ],
+                "response_options": {
+                    "type": "action"
+                }
+            }
+        ],
+
+        "init": {
+            "console": {
+                "enabled": true,
+                "message": "Hello world... o_o",
+                "styling": {
+                    "color": "blue",
+                    "style": "bold"
+                }
+            },
+
+            "message": {
+                "enabled": true,
+
+                "messages": [
+                    "Loaded up, nice."
+                ],
+
+                "message_options": {
+                    "type": "action",
+                    "channel": "asciidude"
+                }
+            }
+        },
+
+        "chatLog": true,
+        "debug": false,
+        "selfCommands": true
+    },
+
+    "channels": ["asciidude"]
+}
