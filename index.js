@@ -58,7 +58,7 @@ client.on('chat', async (channel, userState, message, self) => {
         if(message == command['command_name']) {
             for(response of command['responses']) {
                 let res = response.replace('{USER.USERNAME}', userState.username)
-                    .replace('{TIME.MM_DD_YY}', new Date(Date.now()).toString())
+                    .replace('{TIME.DATE}', new Date(Date.now()).toString())
                     .replace('{TIME.HH_MM_SS}', `${new Date(Date.now()).toLocaleTimeString("en-us", {timeStyle: "long"})}`)
                     .replace('{USER.DISPLAY_NAME}', userState['display-name'])
                     .replace('{USER.BADGE_INFO}', userState['badge-info'])
