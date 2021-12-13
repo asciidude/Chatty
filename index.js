@@ -103,11 +103,11 @@ client.on('connected', async () => {
     if(init['message']['enabled'] === true) {
         for(response of init['message']['messages']) {
             if(init['message']['message_options']['type'] == 'action') {
-                await client.action(init['message']['message_options']['channel'], init['message']['messages']);
+                await client.action(init['message']['message_options']['channel'], response);
             }
 
             else if(init['message']['message_options']['type'] == 'say') {
-                await client.say(init['message']['message_options']['channel'], init['message']['messages']);
+                await client.say(init['message']['message_options']['channel'], response);
             }
 
             else
